@@ -1,0 +1,850 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"button",
+				"buttonBool"
+			],
+			[
+				"write",
+				"writeSerial"
+			],
+			[
+				"writ",
+				"writeSerial"
+			],
+			[
+				"read",
+				"readSerialData"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"thi",
+				"thisCallback"
+			],
+			[
+				"crea",
+				"create"
+			],
+			[
+				"margin",
+				"margin-left\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"borde",
+				"border-color\tproperty"
+			],
+			[
+				"le",
+				"length-1"
+			],
+			[
+				"alig",
+				"align-content\tproperty"
+			],
+			[
+				"get",
+				"getThis"
+			],
+			[
+				"r",
+				"response"
+			],
+			[
+				"res",
+				"responseText"
+			],
+			[
+				"tx",
+				"txtFile"
+			],
+			[
+				"str",
+				"strokeWidth"
+			],
+			[
+				"st",
+				"students"
+			],
+			[
+				"an",
+				"anObject"
+			],
+			[
+				"te",
+				"txtFile"
+			],
+			[
+				"key",
+				"keyValuePairs"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"coor",
+				"coordPairs"
+			],
+			[
+				"enr",
+				"entrances"
+			],
+			[
+				"parse",
+				"parsePoint"
+			],
+			[
+				"par",
+				"parsePoint"
+			],
+			[
+				"shape",
+				"shapes"
+			],
+			[
+				"end",
+				"endShape"
+			],
+			[
+				"b",
+				"beginShape"
+			],
+			[
+				"x",
+				"xAxis"
+			],
+			[
+				"data",
+				"dataView"
+			],
+			[
+				"table",
+				"tableStats"
+			],
+			[
+				"plo",
+				"plotY"
+			],
+			[
+				"plot",
+				"plotWidth"
+			],
+			[
+				"keyV",
+				"keyValueArray"
+			],
+			[
+				"img",
+				"foregroundImg"
+			],
+			[
+				"for",
+				"foregroundImg"
+			],
+			[
+				"cap",
+				"capture"
+			],
+			[
+				"capt",
+				"captureBackground"
+			],
+			[
+				"back",
+				"backgroundImg"
+			],
+			[
+				"track",
+				"trackThis"
+			],
+			[
+				"colr",
+				"colorTracker"
+			],
+			[
+				"av",
+				"avgPixel"
+			],
+			[
+				"hist",
+				"histVal"
+			],
+			[
+				"to",
+				"toff"
+			],
+			[
+				"noi",
+				"noiseScale"
+			],
+			[
+				"vid",
+				"vidVol"
+			],
+			[
+				"c",
+				"currentTime"
+			],
+			[
+				"lo",
+				"loadPixels"
+			],
+			[
+				"m",
+				"mVignette"
+			],
+			[
+				"ori",
+				"origLuma"
+			],
+			[
+				"im",
+				"imgCopy"
+			],
+			[
+				"comp",
+				"compMax"
+			],
+			[
+				"compM",
+				"compMax"
+			],
+			[
+				"cM",
+				"cMax"
+			],
+			[
+				"upd",
+				"updatePixels"
+			],
+			[
+				"proc",
+				"procImage"
+			],
+			[
+				"up",
+				"updatePixels"
+			],
+			[
+				"pi",
+				"pixelData"
+			],
+			[
+				"mask",
+				"maskImg"
+			],
+			[
+				"imgDim",
+				"imgDimY"
+			],
+			[
+				"beat",
+				"beatDetection"
+			],
+			[
+				"mod",
+				"modFreq"
+			],
+			[
+				"dis",
+				"displayType"
+			],
+			[
+				"displ",
+				"displayType"
+			],
+			[
+				"pl",
+				"playbackRate"
+			],
+			[
+				"myS",
+				"mySoundB"
+			],
+			[
+				"myPh",
+				"myPhraseB"
+			],
+			[
+				"no",
+				"notePos"
+			],
+			[
+				"mous",
+				"mouseX"
+			],
+			[
+				"di",
+				"disconnect"
+			],
+			[
+				"gain",
+				"gainOutput"
+			],
+			[
+				"de",
+				"delay"
+			],
+			[
+				"wind",
+				"windowHeight"
+			],
+			[
+				"cro",
+				"crossFade"
+			],
+			[
+				"set",
+				"setInput"
+			],
+			[
+				"del",
+				"delayTime"
+			],
+			[
+				"delay",
+				"delayTime"
+			],
+			[
+				"draw",
+				"drawRect"
+			],
+			[
+				"l",
+				"loopColor"
+			],
+			[
+				"loop",
+				"loopColor"
+			],
+			[
+				"loo",
+				"loopAmt"
+			],
+			[
+				"pla",
+				"playRecording"
+			],
+			[
+				"rev",
+				"reverb"
+			],
+			[
+				"fil",
+				"filter"
+			],
+			[
+				"compe",
+				"compressorSlider"
+			],
+			[
+				"file",
+				"filterSlider"
+			],
+			[
+				"re",
+				"recording"
+			],
+			[
+				"sound",
+				"soundRecordings"
+			],
+			[
+				"com",
+				"compressor"
+			],
+			[
+				"sclaed",
+				"scaledWetDry"
+			],
+			[
+				"wet",
+				"wetdry"
+			],
+			[
+				"slid",
+				"sliderClicked"
+			],
+			[
+				"F",
+				"Filter"
+			],
+			[
+				"pro",
+				"process"
+			],
+			[
+				"input",
+				"inputLevel"
+			],
+			[
+				"in",
+				"inputLevel"
+			],
+			[
+				"rectY",
+				"rectDimY"
+			],
+			[
+				"coll",
+				"collisionVisual"
+			],
+			[
+				"rectDim",
+				"rectDimX"
+			],
+			[
+				"inn",
+				"innerRect"
+			],
+			[
+				"out",
+				"outerRect"
+			],
+			[
+				"stroke",
+				"strokeWeight"
+			],
+			[
+				"mouse",
+				"mouseInCircle"
+			],
+			[
+				"rect",
+				"rectangle"
+			],
+			[
+				"minD",
+				"minDistX"
+			],
+			[
+				"colo",
+				"hitColor"
+			],
+			[
+				"mo",
+				"moveIt"
+			],
+			[
+				"noise",
+				"noiseOff"
+			],
+			[
+				"slider",
+				"sliderWidth"
+			],
+			[
+				"sli",
+				"sliderHeight"
+			],
+			[
+				"slide",
+				"sliderHeight"
+			],
+			[
+				"roun",
+				"roundTime"
+			],
+			[
+				"dCD",
+				"dCDimY"
+			],
+			[
+				"dC",
+				"dCY"
+			],
+			[
+				"round",
+				"roundNumber"
+			],
+			[
+				"obs",
+				"obstacles"
+			],
+			[
+				"win",
+				"windowHeight"
+			],
+			[
+				"create",
+				"createObstacles"
+			],
+			[
+				"cB",
+				"cBoolBool"
+			],
+			[
+				"dim",
+				"dimX"
+			],
+			[
+				"temp",
+				"tempPosition"
+			],
+			[
+				"chec",
+				"checkCollision"
+			],
+			[
+				"tempDim",
+				"tempDimX"
+			],
+			[
+				"plant",
+				"plantObj"
+			],
+			[
+				"plan",
+				"plantImgs"
+			],
+			[
+				"tempIm",
+				"tempImg2"
+			],
+			[
+				"tempDm",
+				"tempDimY"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "function setup() {\n  createCanvas(400, 400);\n}\n\nfunction draw() {\n  background(220);\n  \n  ellipse(mouseX,mouseY,10, 10);\n  console.log(mouseX);\n  console.log(mouseY);\n}",
+			"file": "week 1/p5/helloWorld.js",
+			"file_size": 0,
+			"file_write_time": 132435581622655922,
+			"settings":
+			{
+				"buffer_size": 168,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 1"
+	],
+	"file_history":
+	[
+		"/C/Users/Alex/Documents/CC_studentwork_f19/CC_Project4/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 14/nodeSerialExample/nodeSerial.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 14/nodeSerialExample/index.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 14/websockets.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/README.md",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 14/nodeSerialExample/webSocketsComm.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 14/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 14/nodeSerialExample/nodeIntro.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 12/02domEvents.js",
+		"/C/Users/Alex/Documents/CC F19 student work/jeremy/ProgressRepo/candy.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 12/03domInterface.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 12/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 12/04manipulatingExistingElements.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 12/05parentChild.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 12/06DomMethods.js",
+		"/C/Users/Alex/Documents/CC F19 student work/jelani/InfinityTrain/sketch.js",
+		"/C/Users/Alex/Documents/CC F19 student work/leo/temp/leo.js",
+		"/C/Users/Alex/Documents/CC F19 student work/leo/temp/index.html",
+		"/C/Users/Alex/Documents/CC F19 student work/jeremy/ProgressRepo/sketch.js",
+		"/C/Users/Alex/Documents/CC F19 student work/leon2/Project4_SoundMachine/sketch.js",
+		"/C/Users/Alex/Documents/CC F19 student work/ahmed/Project4/sketch.js",
+		"/C/Users/Alex/Documents/CC F19 student work/jeremy/ProgressRepo/pixel first iteration0000.bk01.jpg",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 12/01P5dom.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 12/04DomMethods.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 11/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 11/01getRequestCallback.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 11/02simpleAPI.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 11/getString.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/04json.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/data/creativeCodingInfo.txt",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/01stringArrayMethods.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/02tables.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/03geographicData.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/sonifyingData.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/guiDemo.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/graficaDemo.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/lib/grafica.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/02arrayMethods.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/01parseStrings.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/15videoAsSensor.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/18motionDetection.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/14drawingVideo.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/12videoPixels.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/wk9notes",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/17backgroundRemoval.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/13liveCamera.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/10videoFileBasics.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/11videoFunctionality.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/16motionDetection.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/colorTracker.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/videoSpeedByNoise.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/14beatDetection.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/02imageBasics.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/07shapeAsPixel.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/01pixels.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/08mouseVignette.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/09imageAsPixel.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/06keying.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/03p5Image.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/04imagePixels.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/imagePixelTemplate.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/imageAsPixel.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/keying.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/08oscillators.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/11phrasePartScore.js",
+		"/C/Users/Alex/Documents/october16_creativecoding/sketch.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/09ADSRenvelope.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/pixels.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/13fft.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/12visualSequencer.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/getDirListing.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/imageBasics.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/imageTest.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/bpm.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/07soundRecorder.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/amFM.js",
+		"/C/Users/Alex/Documents/p5.js-sound/examples/playbackRatePart/sketch.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/06eq.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/05audioFXChain.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/04simpleAudioFX.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/03stereoMixer.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/01audioFile.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/02micInput.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/07sampler.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/04eq.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/05sampler.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/03audioFX.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/soundOutput.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/audioFile.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/micFX_withGUI.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/micInput.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/noise.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/refactorArray2dSnake.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/GameObjects.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/GamePlay.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/collisionDetection.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/simpleCollisionDetection.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/collisionGame.js",
+		"/C/Users/Alex/Documents/october16_creativecoding/README.md",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/sound.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/imageObjects.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/camera.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/sinCos.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/webGL.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/fractal.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/this.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/classes.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/strings.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/loadingMedia.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/circle.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/array.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/refactor.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 2/week2.md",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/.gitignore",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/copiedExample/index.html",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/copiedExample/sketch.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/functionClasses_VS_ECMA2015",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/classes.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/machineIllustration.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/letVar.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/switchStatements.js",
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 4/text/data/FirstWordLastWord_MichaelNaimark.txt"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "week 1/p5/helloWorld.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								168,
+								168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 59.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "cc-f20.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 267.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
