@@ -4,7 +4,7 @@
 //Use let, which is considered more up to date, unless you have a specific reason to use var.
 
 //var is scoped to the nearest function block
-//let is scoped to the nearest enclosing {} block, which is smaller than function blocks (like in Processing...)
+//let is scoped to the nearest enclosing {} block, which is smaller than function blocks (like in Processing)
 
 //this are global variables
 var var1 = 'var 1';
