@@ -14,8 +14,8 @@ function setup(){
 	console.log(typeof myUndefined);
 	console.log(typeof myNull);
 
-	/*console.log(myUndefined);
-	console.log(myNull);*/
+	console.log(myUndefined);
+	//console.log(myNull);
 
 }
 

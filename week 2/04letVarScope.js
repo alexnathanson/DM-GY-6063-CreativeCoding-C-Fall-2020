@@ -36,7 +36,7 @@ function setup() {
 	console.log(var3);
 
 	//this will throw an error
-	//console.log(let3);
+	console.log(let3);
 	
 }
 

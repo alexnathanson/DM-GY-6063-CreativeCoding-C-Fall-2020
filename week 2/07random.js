@@ -7,13 +7,14 @@ function setup() {
   createCanvas(windowWidth,400);
 
 
-/*	oldLX = random(width);
+	oldLX = random(width);
 	oldLY = random(height);
 
   walkDimX = random(width);
-  walkDimY = random(height);*/
+  walkDimY = random(height);
 
-  frameRate(5);
+  //frameRate(5);
+  fill(random(255),random(255), random(255));
 }
 
 function draw() {
@@ -22,17 +23,17 @@ function draw() {
 
 	background(0,100,100);
 
-  	/*let newLX = random(width);
+  	let newLX = random(width);
   	let newLY = random(height);
   	line(newLX,newLY, oldLX,oldLY);
   	oldLX = newLX;
-  	oldLY = newLY;*/
+  	oldLY = newLY;
 
-	fill(random(255),random(255), random(255));
-	ellipse(width/2,height/2,random(width),random(height))
+	//fill(random(255),random(255), random(255));
+	//ellipse(width/2,height/2,random(width),random(height))
 
-/*	randomWalks();
-	ellipse(width/2,height/2,walkDimX,walkDimY);*/
+	randomWalks();
+	ellipse(width/2,height/2,walkDimX,walkDimY);
 }
 
 function randomWalks(){

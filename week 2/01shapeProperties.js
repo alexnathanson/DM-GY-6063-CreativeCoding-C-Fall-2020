@@ -3,6 +3,8 @@
 function setup() {
   // put setup code here
   createCanvas(400,400);
+
+  print("Hello world!");
 }
 
 function draw() {
@@ -14,13 +16,13 @@ function draw() {
 	//strokeWeight determines line thickness
 	strokeWeight(mouseX/10);
 
-	strokeJoin(ROUND);//determines corner joints for shapes
+	strokeJoin(BEVEL);//determines corner joints for shapes
 
 
   noFill();
   //ellipse(mouseX,mouseY,50);
 
-  rectMode(CENTER); //determines draw position, default is corner
+  rectMode(CORNERS); //determines draw position, default is corner
 
   //noStroke();
   rect(mouseX,mouseY, 50,50);
