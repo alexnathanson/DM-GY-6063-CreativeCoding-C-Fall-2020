@@ -8,7 +8,7 @@ function setup() {
 
 function draw() {
   // put drawing code here
-  background(255,100,100);
+  //background(255,100,100);
 
   stroke(100);
   strokeWeight(3);

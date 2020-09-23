@@ -1,3 +1,4 @@
+//translate, rotate, scale
 
 function setup() {
   // put setup code here
@@ -9,7 +10,7 @@ function draw() {
   // put drawing code here
 	background(0,100,100);
 
-	//translate moves matrix
+	//translate moves the origin point of the matrix
 	translate(mouseX,mouseY);
 
 	//in radians, rotates around 0,0

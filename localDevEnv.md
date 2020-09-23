@@ -20,7 +20,7 @@
 One of the simplest ways to run a local server is with Python. Python is generally pre-installed on Macs and Windows users will need to download it. You will need to use command line/ terminal.
 * To check if you already have Python installed and the version, open terminal and type `python`. If its not installed, install <a href="https://www.python.org/downloads/" target="_blank">python</a>.
 * Navigate to the directory that contains your HTML file.
-	* Different OS and command line interfaces use slightly different syntax. It is easy to find an introduction to command line for your specific OS by searching online. To run the serrver, all you need to know is how to move around the directory structure. The command to change directory used by most if not all systems is `cd` + the name of the directory or `..` to move up in the directory stucture. It may also be useful to list the contents of the directory. `dir` works in windows. `ls` will lists the contents for Mac.
+	* Different OS and command line interfaces use slightly different syntax. It is easy to find an introduction to command line for your specific OS by searching online. To run the serrver, all you need to know is how to move around the directory structure. The command to change directory used by most, if not all, systems is `cd` + the name of the directory or `..` to move up in the directory stucture. It may also be useful to list the contents of the directory. `dir` works in windows. `ls` will lists the contents for Mac.
 * Run the below code based on which version of python you are using.
 	* Python 3 `python -m http.server`
 	* Python 2 `python -m SimpleHTTPServer`

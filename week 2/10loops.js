@@ -17,7 +17,7 @@ function draw() {
 		line((width/10)*x,0,(width/10)*x,height);
 	}
 	
-	//nested for loop
+	/*//nested for loop
 	for(let x = 1; x < 10; x++){
 		for(let y = 1; y <10;y++){
 			fill(255/x,255/y,0);
@@ -31,6 +31,6 @@ function draw() {
 		line((width/10)*i, 0, 0, height);
 		i++;
 	}
-	i=1;
+	i=1;*/
 
 }
