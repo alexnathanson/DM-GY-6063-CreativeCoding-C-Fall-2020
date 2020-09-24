@@ -9,6 +9,8 @@ function draw() {
   // put drawing code here
 	background(0,100,100);
 
+	rect(200,200,50,50);
+
 	//translate moves matrix
 	translate(width/2,height/2);
 
@@ -18,7 +20,7 @@ function draw() {
 	rotate(mouseX * (TWO_PI/width));
 
 
-/*	//to rotate center of object, center it on 0,0
+	/*//to rotate center of object, center it on 0,0
 	rectMode(CENTER)
 	rect(0,0,100,20);
 
@@ -26,7 +28,6 @@ function draw() {
 	rectMode(CORNER)
 	rect(0,0,100,20);
 */
-
 
 
 	rectMode(CORNER)

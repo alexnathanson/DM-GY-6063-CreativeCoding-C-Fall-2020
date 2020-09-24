@@ -3,7 +3,9 @@ In JS an array can contain different types of data*/
 
 let myArray = []; //create an array
 
-let myHardcodedArray = [4,6,2,10];
+let myImageArray = ['image1.jpg','image2.jpg'];
+
+//let myHardcodedArray = [4,6,2,10];
 
 function setup(){
 	createCanvas(windowWidth, windowHeight/2);
@@ -11,14 +13,16 @@ function setup(){
 	//there are a number of ways to populate an array
 	/*myArray[0] = 4;
 	myArray[1] = 6;*/
+	//myArray[3] = 8; //dont skip
 
-	for (let mA = 0; mA < width/2; mA++){
+	let arraySize = width/2;
+	for (let mA = 0; mA < arraySize; mA++){
 		myArray[mA] = random(0,255);
 	}
 
 	console.log(myArray);
 	console.log(myArray.length);
-
+	console.log(myArray[0]);
 }
 
 function draw(){

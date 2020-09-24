@@ -15,7 +15,7 @@ function draw() {
 
 	//in radians, rotates around 0,0
 	//radians goes 0-2PI
-	rotate(.33*PI);
+	rotate(PI);
 
 	//scale scales from origin as well
 	scale(mouseY/height);

@@ -3,7 +3,7 @@ In JS an array can contain different types of data*/
 
 let myArray = []; //create an array
 
-//js doesn't have an explicit multidimensional array type, but arrays can always be placed inside of other arrays
+/*//js doesn't have an explicit multidimensional array type, but arrays can always be placed inside of other arrays
 //this is a 2 dimensional array (4x4)
 let myDimensionalArray = [
 	[1,0,0,0],
@@ -11,7 +11,7 @@ let myDimensionalArray = [
 	[0,0,1,0],
 	[0,0,0,1]
 ];
-
+*/
 
 let startColor, endColor;
 
@@ -23,7 +23,7 @@ function setup(){
 	noStroke();
 	
 	for (let mX = 0; mX < width/4; mX++){
-		myArray[mX] = []
+		myArray[mX] = [];
 		for (let mY = 0; mY < height/4; mY++){
 			myArray[mX][mY] = random(0,255);
 		}

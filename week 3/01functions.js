@@ -12,19 +12,25 @@ function setup() {
 function draw() {
   // put drawing code here
 
-	//makeEllipse();
+
+  	
+	/*fill(255/x,0,255/x);
+	makeTwoShapes();
+*/
+  	
+	let counter = ellapsedFrames(100);
 
 	let c = color(200,100,250);
-	makeRectArg(c,ellapsedFrames(100));
-	//console.log(ellapsedFrames(100));
+	makeRectArg(c,counter,counter+10);
+	console.log(ellapsedFrames(100));
 }
 
 function mouseClicked(){
 	background(0,100,100);
 
-	chooseShape(width/4,height/2);
+	/*chooseShape(width/4,height/2);
 	chooseShape((width/4)*2,height/2);
-	chooseShape((width/4)*3,height/2);
+	chooseShape((width/4)*3,height/2);*/
 }
 
 function chooseShape(pX, pY){
@@ -44,17 +50,27 @@ function chooseShape(pX, pY){
 
 //in js you do not need to specify a return type for a function
 function makeEllipse(){
-	fill(0,0,250);
+	//fill(0,0,250);
 
 	let dx = random(10,100);
 	let dy = random(10,100);
 	ellipse(mouseX,mouseY,dx, dy);
 }
 
+function makeTwoShapes(){
+	let dx = random(10,100);
+	let dy = random(10,100);
+	ellipse(mouseX,mouseY,dx, dy);
+	
+	dx = random(10,100);
+	dy = random(10,100);
+	rect(mouseX+100,mouseY+50,dx, dy);
+}
+
 //this function allows you to pass arguments
-function makeRectArg(color,dim){
+function makeRectArg(color,dimX,dimY){
 	fill(color);
-	rect(mouseX,mouseY,dim,dim);
+	rect(mouseX,mouseY,dimX,dimY);
 }
 
 //this function returns a value

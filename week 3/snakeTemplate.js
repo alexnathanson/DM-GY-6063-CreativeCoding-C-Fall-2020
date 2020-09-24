@@ -1,7 +1,7 @@
 //a game of snake
 
 /*
-You can use this as a starting point/ template for your homework. Feel free to start from scratch heavily tweak this...
+You can use this as a starting point/ template for your homework. Feel free to start from scratch or heavily tweak this...
 */
 let snake = [];
 let dir, speed;
