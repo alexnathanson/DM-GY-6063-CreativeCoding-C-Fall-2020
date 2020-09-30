@@ -23,7 +23,7 @@ function draw(){
 
 	//shift everything over by 1
 	for(let d = len-1; d > 0;d--){
-			myArray[d]=myArray[d-1];
+		myArray[d]=myArray[d-1];
 	}
 
 	//add the new data
