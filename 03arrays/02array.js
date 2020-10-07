@@ -23,6 +23,8 @@ function setup(){
 	console.log(myArray);
 	console.log(myArray.length);
 	console.log(myArray[0]);
+
+	isThisRunning();
 }
 
 function draw(){
@@ -61,4 +63,14 @@ function mousePressed(){
 	for(let a = 0;a < 10;a++){
 		myArray.push(random(0,255));
 	}
+}
+
+function isThisRunning(){
+
+	let status = 'YES!';
+
+	console.log(status);
+
+	console.log(typeof status);
+	//consolelog(fill*2);
 }

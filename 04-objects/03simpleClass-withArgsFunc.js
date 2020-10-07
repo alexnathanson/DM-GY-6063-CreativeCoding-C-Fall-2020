@@ -4,8 +4,8 @@ function setup(){
 	createCanvas(windowWidth, 600);
 
 	//'new' instantiates a new instance of an object
-	myPlanet = new Planet(200,200,6);
-	myOtherPlanet = new Planet(300,200,10);
+	myPlanet = new Planet(200,200,6,100);
+	myOtherPlanet = new Planet(300,200,10,300);
 }
 
 
@@ -22,9 +22,9 @@ function draw(){
 class Planet{
 	//the constructor defines the properties in the class
 	//you can pass in arguments to the constructor
-	constructor(tempPosX,tempPosY,tempRange){
+	constructor(tempPosX,tempPosY,tempRange,tempDX){
 		//'this' is a key word that references the current instance
-		this.diameterX = 50;
+		this.diameterX = tempDX;
 		this.diameterY = 200;
 		this.x = tempPosX;
 		this.y = tempPosY;

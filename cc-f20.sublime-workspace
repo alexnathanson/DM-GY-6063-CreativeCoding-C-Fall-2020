@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"di",
+				"diameterY"
+			],
+			[
+				"de",
+				"diameterX"
+			],
+			[
+				"my",
+				"myOtherPlanet"
+			],
+			[
+				"te",
+				"tempDY"
+			],
+			[
+				"temp",
+				"tempDX"
+			],
+			[
+				"d",
+				"diameterY"
+			],
+			[
+				"ra",
+				"randomColor"
+			],
+			[
+				"tem",
+				"tempX"
+			],
+			[
 				"len",
 				"length"
 			],
@@ -146,10 +178,6 @@
 			[
 				"an",
 				"anObject"
-			],
-			[
-				"te",
-				"txtFile"
 			],
 			[
 				"key",
@@ -352,16 +380,8 @@
 				"mouseX"
 			],
 			[
-				"di",
-				"disconnect"
-			],
-			[
 				"gain",
 				"gainOutput"
-			],
-			[
-				"de",
-				"delay"
 			],
 			[
 				"wind",
@@ -494,229 +514,112 @@
 			[
 				"minD",
 				"minDistX"
-			],
-			[
-				"colo",
-				"hitColor"
-			],
-			[
-				"mo",
-				"moveIt"
-			],
-			[
-				"noise",
-				"noiseOff"
-			],
-			[
-				"slider",
-				"sliderWidth"
-			],
-			[
-				"sli",
-				"sliderHeight"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "week 2/04letVarScope.js",
+			"file": "02loops/nestedLoops.js",
 			"settings":
 			{
-				"buffer_size": 1318,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "week 2/03dataTypes.js",
-			"settings":
-			{
-				"buffer_size": 905,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "week 2/machine.js",
-			"settings":
-			{
-				"buffer_size": 2978,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "week 3/index.html",
-			"settings":
-			{
-				"buffer_size": 425,
+				"buffer_size": 310,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "week 3/03mouseTracker.js",
+			"file": "04-objects/classes.js",
 			"settings":
 			{
-				"buffer_size": 865,
+				"buffer_size": 2016,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "week 3/04array2D.js",
+			"file": "04-objects/03simpleClass-withArgsFunc.js",
 			"settings":
 			{
-				"buffer_size": 1222,
+				"buffer_size": 1060,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "week 3/01functions.js",
+			"contents": "let myPlanet, myOtherPlanet;\n\nfunction setup(){\n\tcreateCanvas(windowWidth, 600);\n\n\t//'new' instantiates a new instance of an object\n\tmyPlanet = new Planet();\n\n\tmyOtherPlanet = new Earth();\n\n}\n\n\nfunction draw(){\n\tbackground(150);\n\t//ellipse(myPlanet.x,myPlanet.y,myPlanet.diameterX,myPlanet.diameterY);\n\n\t//ellipse(myOtherPlanet.x,myOtherPlanet.y,myOtherPlanet.diameterX,myOtherPlanet.diameterY);\n\n\tmyPlanet.draw();\n\tmyOtherPlanet.draw();\n\n\tsomeFunction(\"print this\");\n}\n\nfunction someFunction(somethingToPrint){\n\tconsole.log(somethingToPrint);\n}\n\n//class names typically start with an upper case letter\nclass Planet{\n\t//the constructor defines the properties in the class\n\t//you can pass in arguments to the constructor\n\tconstructor(){\n\t\t//'this' is a key word that references the current instance\n\t\tthis.diameterX = 50;\n\t\tthis.diameterY = 200;\n\t\tthis.x = 200;\n\t\tthis.y = 200;\n\t\tthis.c = [255,0,0];\n\t}\n\n\tdraw(){\n\t\tfill(this.c);\n\t\tthis.move();\n\t\tellipse(this.x,this.y,this.diameterX,this.diameterY);\n\t}\n\n\tmove(){\n\t\tthis.x =this.x + (random(10)-5);\n\t\tthis.y =this.y + (random(10)-5);\n\t}\n}\n\nclass Earth extends Planet{\n\tconstructor(){\n\t\tsuper();\n\t\tthis.diameterX = 250;\n\t}\n\n\tdraw(){\n\t\tnoFill();\n\t\tthis.move();\n\t\tellipse(this.x,this.y,this.diameterX,this.diameterY);\n\t}\n\n\tmove(){\n\t\tsuper.move();\n\t\tthis.diameterY = this.diameterY + (random(10)-5);\n\t}\n}",
+			"file": "04-objects/02simpleClass.js",
+			"file_size": 1399,
+			"file_write_time": 132459881616708422,
 			"settings":
 			{
-				"buffer_size": 1595,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "week 3/02array.js",
-			"settings":
-			{
-				"buffer_size": 1308,
+				"buffer_size": 1348,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "week 3/05mouseTracker2D.js",
+			"file": "04-objects/04inheritance.js",
 			"settings":
 			{
-				"buffer_size": 778,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "week 3/06deepShallowCopy.js",
-			"settings":
-			{
-				"buffer_size": 1040,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "//deep vs shallow copy"
-			}
-		},
-		{
-			"file": "week 2/index.html",
-			"settings":
-			{
-				"buffer_size": 418,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "week 2/13pushPop.js",
-			"settings":
-			{
-				"buffer_size": 605,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "week 3/snakeTemplate.js",
-			"settings":
-			{
-				"buffer_size": 1609,
+				"buffer_size": 1230,
 				"encoding": "UTF-8",
 				"line_ending": "Windows",
 				"name": "function setup(){"
 			}
 		},
 		{
-			"contents": "\n\nlet offsetX = 5;\n\nrect(0 + offsetX, 0,5,5);\n\nrect(20 + offsetX, 20, 10,10);",
+			"file": "04-objects/05classArray.js",
 			"settings":
 			{
-				"buffer_size": 77,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "week 3/snake.js",
-			"settings":
-			{
-				"buffer_size": 2093,
+				"buffer_size": 771,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": ".gitignore",
+			"file": "04-objects/06polymorphism.js",
 			"settings":
 			{
-				"buffer_size": 8,
+				"buffer_size": 1674,
 				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "snake.js"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "week 2/10loops.js",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 637,
+				"buffer_size": 447,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "week 2/12rotation.js",
+			"file": "04-objects/01object.js",
 			"settings":
 			{
-				"buffer_size": 695,
+				"buffer_size": 605,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "week 2/11matrixTransformations.js",
+			"file": "03arrays/02array.js",
 			"settings":
 			{
-				"buffer_size": 551,
+				"buffer_size": 1455,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "week 2/07random.js",
+			"file": "03arrays/inclass-snake.js",
 			"settings":
 			{
-				"buffer_size": 837,
+				"buffer_size": 1151,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "week 2/05conditionals.js",
-			"settings":
-			{
-				"buffer_size": 686,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "week 2/08simpleAnimation.js",
-			"settings":
-			{
-				"buffer_size": 1211,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -753,19 +656,41 @@
 	"expanded_folders":
 	[
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/empty-example",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3"
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/02loops",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/02matrixTransformations",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/03arrays",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/empty-example"
 	],
 	"file_history":
 	[
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects/object.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/02loops/10loops.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/08simpleAnimation.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/05conditionals.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/07random.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/11matrixTransformations.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/12rotation.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/10loops.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/.gitignore",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/snake.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/snakeTemplate.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/04letVarScope.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/03dataTypes.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/machine.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/index.html",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/03mouseTracker.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/04array2D.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/01functions.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/02array.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/05mouseTracker2D.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/06deepShallowCopy.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/index.html",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/13pushPop.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/01shapeProperties.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/02mousingAround.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/localDevEnv.md",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/09time.js",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 3/04array2D.js",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/10loops.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/README.md",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 1/p5/helloWorld.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2 - p5js/sketch.js",
@@ -866,27 +791,7 @@
 		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/soundOutput.js",
 		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/audioFile.js",
 		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/micFX_withGUI.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/micInput.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/noise.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/index.html",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/index.html",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 5/p5JS_example/refactorArray2dSnake.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/index.html",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/GameObjects.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/GamePlay.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/collisionDetection.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/simpleCollisionDetection.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 7/collisionGame.js",
-		"/C/Users/Alex/Documents/october16_creativecoding/README.md",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/sound.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/imageObjects.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/camera.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/sinCos.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/webGL.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/fractal.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/this.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/classes.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 6/strings.js"
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/micInput.js"
 	],
 	"find":
 	{
@@ -923,24 +828,24 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "week 2/04letVarScope.js",
+					"file": "02loops/nestedLoops.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1318,
+						"buffer_size": 310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								673,
-								673
+								0,
+								0
 							]
 						],
 						"settings":
@@ -949,56 +854,55 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 225.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "week 2/03dataTypes.js",
+					"file": "04-objects/classes.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 905,
+						"buffer_size": 2016,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								359,
-								359
+								1184,
+								1156
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 450.0,
+						"translation.y": 1125.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "week 2/machine.js",
+					"file": "04-objects/03simpleClass-withArgsFunc.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2978,
+						"buffer_size": 1060,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2978,
-								2978
+								799,
+								799
 							]
 						],
 						"settings":
@@ -1007,27 +911,144 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1156.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "week 3/index.html",
+					"file": "04-objects/02simpleClass.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 425,
+						"buffer_size": 1348,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								359,
-								359
+								616,
+								616
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 75.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "04-objects/04inheritance.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								711,
+								711
+							]
+						],
+						"settings":
+						{
+							"auto_name": "function setup(){",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "04-objects/05classArray.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 771,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								178,
+								178
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "04-objects/06polymorphism.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								429,
+								429
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 447,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								381,
+								381
 							]
 						],
 						"settings":
@@ -1044,213 +1065,8 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "week 3/03mouseTracker.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 865,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								154,
-								154
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "week 3/04array2D.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1222,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								893,
-								893
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "week 3/01functions.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1595,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								514,
-								514
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "week 3/02array.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1308,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								207,
-								207
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
 					"buffer": 8,
-					"file": "week 3/05mouseTracker2D.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 778,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								445,
-								445
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "week 3/06deepShallowCopy.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1040,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								796,
-								796
-							]
-						],
-						"settings":
-						{
-							"auto_name": "//deep vs shallow copy",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 525.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "week 2/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 418,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								352,
-								352
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "week 2/13pushPop.js",
+					"file": "04-objects/01object.js",
 					"semi_transient": false,
 					"settings":
 					{
@@ -1261,8 +1077,8 @@
 						"selection":
 						[
 							[
-								378,
-								378
+								116,
+								116
 							]
 						],
 						"settings":
@@ -1271,300 +1087,69 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 150.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "week 3/snakeTemplate.js",
+					"buffer": 9,
+					"file": "03arrays/02array.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1609,
+						"buffer_size": 1455,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1171,
-								1171
+								1008,
+								1008
 							]
 						],
 						"settings":
 						{
-							"auto_name": "function setup(){",
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1200.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 10,
+					"file": "03arrays/inclass-snake.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 77,
+						"buffer_size": 1151,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								46,
-								46
+								1124,
+								1124
 							]
 						],
 						"settings":
 						{
 							"auto_name": "",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "week 3/snake.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2093,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								18,
-								18
-							]
-						],
-						"settings":
-						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 675.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": ".gitignore",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8,
-								8
-							]
-						],
-						"settings":
-						{
-							"auto_name": "snake.js",
-							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "week 2/10loops.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 637,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								634,
-								634
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 300.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "week 2/12rotation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 695,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								404,
-								404
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 150.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "week 2/11matrixTransformations.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 551,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								464,
-								464
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 150.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "week 2/07random.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 837,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								525,
-								525
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 300.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "week 2/05conditionals.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 686,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								588,
-								588
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 750.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "week 2/08simpleAnimation.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1211,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								955,
-								955
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 750.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]

@@ -3,7 +3,7 @@ let planets = [];
 function setup(){
 	createCanvas(windowWidth, 600);
 
-	for (let s = 0; s < 10;s++){
+	for (let s = 0; s < 100;s++){
 		planets[s] = new Planet(75,100);
 	}
 }
