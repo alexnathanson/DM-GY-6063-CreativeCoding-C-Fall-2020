@@ -15,15 +15,16 @@ If the response is “git version” plus the version number then it worked.
 
 In terminal enter:
 
-git config --global user.name "YOUR_FULL_NAME"
-git config --global user.email "YOUR_EMAIL_ADDRESS"
+`git config --global user.name "YOUR_FULL_NAME"`
+
+`git config --global user.email "YOUR_EMAIL_ADDRESS"`
 
 To start a new repository, create a new repository on the git hub website and clone it to your local computer.
 
 ### Clone a project
 To collaborate on an existing project, you can just clone that existing repository to your machine. 
 
-git clone https://github.com/alexnathanson/october16_creativecoding
+`git clone URL-TO-REPOSITORY`
 
 ### Push your changes to Git Hub
 Once your changes have been made, push your code to git hub.
