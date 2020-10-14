@@ -1,7 +1,9 @@
+let result;
+
 //preload is a P5JS function that lets us avoid using callbacks
 //it ensures that this code finishes executing before running setup
 function preload() {
-  result = loadStrings('/05/data/creativeCodingInfo.txt');
+  result = loadStrings('/05-data/data/creativeCodingInfo.txt');
 }
 
 function setup(){
@@ -9,9 +11,9 @@ function setup(){
 
 	//loading the text file here requires a callback
 	//the result of loadString is passed to the callback as an argument
-	loadStrings('/05/data/creativeCodingInfo.txt', readText);
+	//loadStrings('/05-data/data/creativeCodingInfo.txt', readText);
 
-	//readText(result);
+	readText(result);
 }
 
 function draw(){

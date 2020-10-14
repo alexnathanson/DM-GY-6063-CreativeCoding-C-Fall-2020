@@ -10,13 +10,15 @@ function preload(){
 }
 
 function setup(){
-	//console.log(typeof aJSON);
-	//console.log(aJSON);
+	console.log(typeof aJSON);
+	console.log(aJSON);
 	//console.log(JSON.stringify(aJSON));//stringify turns a JSON object into a string
 	//console.log(JSON.parse(JSON.stringify(aJSON)));//parse turns a string into a JSON object
-	let pJSON = JSON.stringify(aJSON);
+	/*let pJSON = JSON.stringify(aJSON);*/
 	console.log(JSON.length);
 	console.log(aJSON[0]);
+
+	//console.log(Objects.keys(aJSON));
 /*
 	let anObject = {"class": "creative coding","teacher":"Alex","students": 17};
 	console.log(anObject);

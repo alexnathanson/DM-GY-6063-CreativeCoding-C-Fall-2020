@@ -6,6 +6,8 @@ Constrain limits the range of a number
 function setup() {
   // put setup code here
   createCanvas(windowWidth,400);
+
+  console.log(map(5, 0, 10, 0,200));
 }
 
 function draw() {

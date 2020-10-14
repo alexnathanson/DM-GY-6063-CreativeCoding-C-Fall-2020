@@ -31,7 +31,7 @@ function secondd() {
   }, 0)*/
 
 	//this will also run sycnhronously
-	loadStrings('/05/assets/example.txt', readText);
+	loadStrings('/05-data/data/creativeCodingInfo.txt', readText);
 
   //this will run synchronously
   //console.log(2)

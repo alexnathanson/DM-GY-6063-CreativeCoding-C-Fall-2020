@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"phe",
+				"phraseCount"
+			],
+			[
+				"phrase",
+				"phraseCount"
+			],
+			[
+				"aS",
+				"aJSON"
+			],
+			[
+				"api",
+				"apiKey"
+			],
+			[
+				"temp",
+				"tempMinX"
+			],
+			[
+				"tempM",
+				"tempMaxX"
+			],
+			[
+				"tempMin",
+				"tempMinY"
+			],
+			[
+				"arr",
+				"arrayOfPoints"
+			],
+			[
+				"tem",
+				"tempMin"
+			],
+			[
+				"pars",
+				"parsedBoundaries"
+			],
+			[
 				"di",
 				"diameterY"
 			],
@@ -20,20 +60,12 @@
 				"tempDY"
 			],
 			[
-				"temp",
-				"tempDX"
-			],
-			[
 				"d",
 				"diameterY"
 			],
 			[
 				"ra",
 				"randomColor"
-			],
-			[
-				"tem",
-				"tempX"
 			],
 			[
 				"len",
@@ -482,106 +514,61 @@
 			[
 				"rectY",
 				"rectDimY"
-			],
-			[
-				"coll",
-				"collisionVisual"
-			],
-			[
-				"rectDim",
-				"rectDimX"
-			],
-			[
-				"inn",
-				"innerRect"
-			],
-			[
-				"out",
-				"outerRect"
-			],
-			[
-				"stroke",
-				"strokeWeight"
-			],
-			[
-				"mouse",
-				"mouseInCircle"
-			],
-			[
-				"rect",
-				"rectangle"
-			],
-			[
-				"minD",
-				"minDistX"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "02loops/nestedLoops.js",
+			"file": "05-data/08api.js",
 			"settings":
 			{
-				"buffer_size": 310,
+				"buffer_size": 1217,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "empty-example/sketch.js",
+			"settings":
+			{
+				"buffer_size": 145,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "04-objects/classes.js",
+			"file": "empty-example/index.html",
 			"settings":
 			{
-				"buffer_size": 2016,
+				"buffer_size": 411,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "05-data/02textFile.js",
+			"settings":
+			{
+				"buffer_size": 570,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "04-objects/03simpleClass-withArgsFunc.js",
+			"file": "05-data/03stringMethods.js",
 			"settings":
 			{
-				"buffer_size": 1060,
+				"buffer_size": 1116,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "let myPlanet, myOtherPlanet;\n\nfunction setup(){\n\tcreateCanvas(windowWidth, 600);\n\n\t//'new' instantiates a new instance of an object\n\tmyPlanet = new Planet();\n\n\tmyOtherPlanet = new Earth();\n\n}\n\n\nfunction draw(){\n\tbackground(150);\n\t//ellipse(myPlanet.x,myPlanet.y,myPlanet.diameterX,myPlanet.diameterY);\n\n\t//ellipse(myOtherPlanet.x,myOtherPlanet.y,myOtherPlanet.diameterX,myOtherPlanet.diameterY);\n\n\tmyPlanet.draw();\n\tmyOtherPlanet.draw();\n\n\tsomeFunction(\"print this\");\n}\n\nfunction someFunction(somethingToPrint){\n\tconsole.log(somethingToPrint);\n}\n\n//class names typically start with an upper case letter\nclass Planet{\n\t//the constructor defines the properties in the class\n\t//you can pass in arguments to the constructor\n\tconstructor(){\n\t\t//'this' is a key word that references the current instance\n\t\tthis.diameterX = 50;\n\t\tthis.diameterY = 200;\n\t\tthis.x = 200;\n\t\tthis.y = 200;\n\t\tthis.c = [255,0,0];\n\t}\n\n\tdraw(){\n\t\tfill(this.c);\n\t\tthis.move();\n\t\tellipse(this.x,this.y,this.diameterX,this.diameterY);\n\t}\n\n\tmove(){\n\t\tthis.x =this.x + (random(10)-5);\n\t\tthis.y =this.y + (random(10)-5);\n\t}\n}\n\nclass Earth extends Planet{\n\tconstructor(){\n\t\tsuper();\n\t\tthis.diameterX = 250;\n\t}\n\n\tdraw(){\n\t\tnoFill();\n\t\tthis.move();\n\t\tellipse(this.x,this.y,this.diameterX,this.diameterY);\n\t}\n\n\tmove(){\n\t\tsuper.move();\n\t\tthis.diameterY = this.diameterY + (random(10)-5);\n\t}\n}",
-			"file": "04-objects/02simpleClass.js",
-			"file_size": 1399,
-			"file_write_time": 132459881616708422,
+			"file": "05-data/04async.js",
 			"settings":
 			{
-				"buffer_size": 1348,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "04-objects/04inheritance.js",
-			"settings":
-			{
-				"buffer_size": 1230,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "function setup(){"
-			}
-		},
-		{
-			"file": "04-objects/05classArray.js",
-			"settings":
-			{
-				"buffer_size": 771,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "04-objects/06polymorphism.js",
-			"settings":
-			{
-				"buffer_size": 1674,
+				"buffer_size": 913,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -590,34 +577,43 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 447,
+				"buffer_size": 422,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "04-objects/01object.js",
-			"settings":
-			{
-				"buffer_size": 605,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "03arrays/02array.js",
 			"settings":
 			{
-				"buffer_size": 1455,
+				"buffer_size": 1451,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "03arrays/inclass-snake.js",
+			"file": "localDevEnv.md",
 			"settings":
 			{
-				"buffer_size": 1151,
+				"buffer_size": 2218,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "05-data/00mapConstrain.js",
+			"settings":
+			{
+				"buffer_size": 758,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "05-data/07json.js",
+			"settings":
+			{
+				"buffer_size": 1127,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -656,14 +652,32 @@
 	"expanded_folders":
 	[
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/02loops",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/02matrixTransformations",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/03arrays",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/empty-example"
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/03arrays"
 	],
 	"file_history":
 	[
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects/03simpleClass-withArgsFunc.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects/classes.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/02loops/nestedLoops.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05-data/data/creativeCodingInfo.txt",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/03arrays/inclass-snake.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/03arrays/02array.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects/01object.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05-data/06multipleCSV.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05-data/00mapConstrain.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05-data/05csv.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/index.html",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05-data/02textFile.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05-data/00deepShallowCopyArray.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05/01text.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects/06polymorphism.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects/05classArray.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects/04inheritance.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05-data/03stringMethods.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05/02textFile.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05/03async.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05/assets/example.txt",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects/02simpleClass.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/04-objects/object.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/02loops/10loops.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/week 2/08simpleAnimation.js",
@@ -769,29 +783,7 @@
 		"/C/Users/Alex/Documents/october16_creativecoding/sketch.js",
 		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/09ADSRenvelope.js",
 		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/pixels.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/13fft.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/12visualSequencer.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/getDirListing.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/imageBasics.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/imageTest.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/bpm.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/07soundRecorder.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/amFM.js",
-		"/C/Users/Alex/Documents/p5.js-sound/examples/playbackRatePart/sketch.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/06eq.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/05audioFXChain.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/04simpleAudioFX.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/03stereoMixer.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/01audioFile.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/02micInput.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/07sampler.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/04eq.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/05sampler.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/03audioFX.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/soundOutput.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/audioFile.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/micFX_withGUI.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/micInput.js"
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/13fft.js"
 	],
 	"find":
 	{
@@ -809,6 +801,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"plotWidth",
+			"latLongSca",
+			"table",
+			"second",
 			"\t\n",
 			"simpleAnimation"
 		],
@@ -818,6 +814,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"boundaries"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -828,169 +825,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "02loops/nestedLoops.js",
+					"file": "05-data/08api.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 310,
+						"buffer_size": 1217,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "04-objects/classes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2016,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1184,
-								1156
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1125.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "04-objects/03simpleClass-withArgsFunc.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1060,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								799,
-								799
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "04-objects/02simpleClass.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1348,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								616,
-								616
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 75.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "04-objects/04inheritance.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1230,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								711,
-								711
-							]
-						],
-						"settings":
-						{
-							"auto_name": "function setup(){",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "04-objects/05classArray.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 771,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								178,
-								178
+								242,
+								242
 							]
 						],
 						"settings":
@@ -1006,26 +858,83 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "04-objects/06polymorphism.js",
+					"buffer": 1,
+					"file": "empty-example/sketch.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1674,
+						"buffer_size": 145,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								429,
-								429
+								95,
+								95
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "empty-example/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "05-data/02textFile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1035,20 +944,77 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "index.html",
+					"buffer": 4,
+					"file": "05-data/03stringMethods.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 447,
+						"buffer_size": 1116,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								381,
-								381
+								1113,
+								1113
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "05-data/04async.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 913,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								779,
+								779
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 150.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								349,
+								349
 							]
 						],
 						"settings":
@@ -1065,20 +1031,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "04-objects/01object.js",
+					"buffer": 7,
+					"file": "03arrays/02array.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 605,
+						"buffer_size": 1451,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								116,
-								116
+								1005,
+								1005
 							]
 						],
 						"settings":
@@ -1087,27 +1053,83 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 975.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "03arrays/02array.js",
+					"buffer": 8,
+					"file": "localDevEnv.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1455,
+						"buffer_size": 2218,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1008,
-								1008
+								1182,
+								1182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 75.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "05-data/00mapConstrain.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "05-data/07json.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								667,
+								667
 							]
 						],
 						"settings":
@@ -1120,36 +1142,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "03arrays/inclass-snake.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1151,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1124,
-								1124
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 675.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
 					"type": "text"
 				}
 			]

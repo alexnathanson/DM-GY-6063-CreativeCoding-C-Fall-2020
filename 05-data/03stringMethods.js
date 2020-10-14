@@ -33,4 +33,11 @@ function setup(){
 		console.log(txtFile[i].slice(equ+3,txtFile[i].length));
 	}
 
+	let s = keyValuePairs.substr(1, 4);
+	console.log(s); 
+
+	keyValuePairs = keyValuePairs.substr(1, 4);
+	console.log(keyValuePairs);
+
+
 }

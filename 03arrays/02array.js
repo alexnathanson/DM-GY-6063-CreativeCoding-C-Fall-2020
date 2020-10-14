@@ -15,7 +15,7 @@ function setup(){
 	myArray[1] = 6;*/
 	//myArray[3] = 8; //dont skip
 
-	let arraySize = width/2;
+	let arraySize = 800;
 	for (let mA = 0; mA < arraySize; mA++){
 		myArray[mA] = random(0,255);
 	}
