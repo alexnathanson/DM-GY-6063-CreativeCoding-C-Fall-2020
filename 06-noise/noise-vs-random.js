@@ -1,6 +1,7 @@
 let noiseArray = [];
 
 let xOff = 0.0;
+let xOffz = 0.0;
 
 function setup(){
 	createCanvas(windowWidth, 400);
@@ -18,6 +19,10 @@ function draw(){
 	let eSizeN = height*noise(xOff);
 	ellipse(width/3,height/2,eSizeN,eSizeN);
 
-	let eSizeR = height * random();
-	ellipse((width/3)*2,height/2,eSizeR,eSizeR);
+	xOffz = xOffz + 0.001;
+	let eSizeNz = height*noise(xOffz);
+	ellipse((width/3)*2,height/2,eSizeNz,eSizeNz);
+
+/*	let eSizeR = height * random();
+	ellipse((width/3)*2,height/2,eSizeR,eSizeR);*/
 }

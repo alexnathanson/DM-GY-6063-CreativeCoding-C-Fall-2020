@@ -48,6 +48,7 @@ function draw(){
 	randomArray = shiftArray(randomArray,random() * height/2);
 	noiseArray = shiftArray(noiseArray,noise(xOff) * height/2);
 	xOff = xOff + 0.01;
+	//console.log(xOff);
 }
 
 function shiftArray(myArray,myValue){

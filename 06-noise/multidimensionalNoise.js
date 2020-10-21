@@ -8,6 +8,7 @@ function setup(){
 	//frameRate(2);
 
 	//oneDimNoise();
+	//anotherOneDimNoise();
 	//twoDimNoise();
 
 }
@@ -35,6 +36,15 @@ function oneDimNoise(){
 	}
 	vertex(width,height);
 	endShape();
+}
+
+function anotherOneDimNoise(){
+	xOff = 0.0;
+	for(let x = 0;x < width;x++){
+		xOff = xOff + 0.01;
+			stroke(noise(xOff)*255);
+			line(x,0,x,height);
+	}
 }
 
 function twoDimNoise(){
@@ -80,15 +90,15 @@ function threeDimNoise(){
 	//2nd dim = y coordinate
 	//3rd dim = time
 	xOff = 0.0;
-	for(let x = 0;x < width/8;x++){
+	for(let x = 0;x < width/4;x++){
 		xOff = xOff + 0.01;
 		yOff=0.0;
-		for(let y = 0;y< height/8;y++){
+		for(let y = 0;y< height/4;y++){
 			yOff = yOff + 0.01;
 			fill(noise(xOff,yOff,zOff)*255);
-			rect(x*8,y*8,8,8);
+			rect(x*4,y*4,4,4);
 		}
 	}
 
-	zOff = zOff + 0.01;
+	zOff = zOff + 0.1;
 }
