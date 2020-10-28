@@ -24,8 +24,8 @@ function setup(){
 	//track.play();
 
 	//addCue isn't working properly atm
-	track.addCue(0.5,bkChange);
-	track.addCue(5,bkChange);
+/*	track.addCue(0.5,bkChange);
+	track.addCue(5,bkChange);*/
 }
 
 function draw(){

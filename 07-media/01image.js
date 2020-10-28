@@ -6,7 +6,7 @@ let img;
 }*/
 
 function setup(){
-	createCanvas(400,400);
+	createCanvas(windowWidth,400);
 	background(0);
 
 	//we can also load an image with a callback
@@ -21,7 +21,7 @@ function draw(){
 
 	//remember if we're using a callback, we need a way to check if the image has loaded
 	if(img){
-			image(img,0,0,100,300);
+		image(img,0,0,img.width/2,img.height/2);
 	}
 
 	//copy(srcImage, sx, sy, sw, sh, dx, dy, dw, dh)

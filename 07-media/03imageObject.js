@@ -54,10 +54,16 @@ class ImageObject{
 		this.dimX = tempDimX;
 		this.dimY = tempDimY;
 		this.imageScaler = 1.0;
+		this.shakeAmt = random(5);
 	}
 
 	display(){
 		image(this.img,this.x,this.y,this.dimX,this.dimY);
+		//this.shake();
+	}
+
+	shake(){
+		this.x+= (random(this.shakeAmt)-(this.shakeAmt/2));
 	}
 }
 

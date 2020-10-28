@@ -27,7 +27,7 @@ function setup() {
   vid.size(2*vid.width,2*vid.height);
 
   //.hide() removes the video from the DOM
-  //vid.hide();
+  vid.hide();
   //vid.showControls();
   
 }

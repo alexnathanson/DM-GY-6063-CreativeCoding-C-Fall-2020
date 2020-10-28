@@ -16,7 +16,17 @@ function setup(){
 }
 
 function draw(){
-	
+	/*if(frameCount%60==0){
+		thud.play();
+	}
+
+	if(frameCount%100==0){
+		drum.play();
+	}
+
+	if(frameCount%50==0){
+		clap.play();
+	}*/
 }
 
 

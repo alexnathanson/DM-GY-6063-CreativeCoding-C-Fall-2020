@@ -18,7 +18,7 @@ function setup(){
 			let index = 4*(ix+(iy*img.width));
 
 			//simple green screen FX
-			if(img.pixels[index+1]> 150){
+			if(img.pixels[index+1]> 200){
 				img.pixels[index+3] = 0;
 			}
 		}
