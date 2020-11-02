@@ -1,5 +1,5 @@
 let shapes = [];
-let amtShape = 5;
+let amtShape = 7;
 
 function setup(){
 	createCanvas(windowWidth,700);
@@ -51,7 +51,7 @@ class SomeShapes{
 		this.hitColor = color(int(random(255)),int(random(255)),int(random(255)),150);//interior color
 		this.collision = false;
 		this.collisionVisual = true;
-		this.inc = map(random(10),0.0,9.0,0.001,0.005);
+		this.inc = map(random(10),0.0,9.0,0.001,0.003);
 		this.noise = 0;
 	}
 
