@@ -37,12 +37,12 @@ void loop() {
 
     buttonState = digitalRead(buttonPin);
 
-  if(buttonState == HIGH){
+  /*if(buttonState == HIGH){
     brightness = randomFade();
-  }
+  }*/
   // set the brightness of pin 9:
   analogWrite(led, brightness);
-/*
+
   // change the brightness for next time through the loop:
   brightness = brightness + fadeAmount;
 
@@ -51,7 +51,7 @@ void loop() {
     fadeAmount = -fadeAmount;
   }
   // wait for 30 milliseconds to see the dimming effect
-  delay(30);*/
+  delay(30);
 }
 
 int randomFade(){
