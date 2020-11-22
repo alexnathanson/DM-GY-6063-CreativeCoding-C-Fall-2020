@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"prev",
+				"prevYCoord"
+			],
+			[
 				"alpha",
 				"alphaImg"
 			],
@@ -510,10 +514,6 @@
 			[
 				"file",
 				"filterSlider"
-			],
-			[
-				"re",
-				"recording"
 			]
 		]
 	},
@@ -614,141 +614,46 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 582,
+				"buffer_size": 576,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "student-work/mengmeng/crab-trip-main/Crab trip.js",
+			"file": "11-serial/01-basicExample.js",
 			"settings":
 			{
-				"buffer_size": 18044,
+				"buffer_size": 1209,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "student-work/dylan/Dylans_Classwork-main/index.html",
+			"file": "11-serial/etchASketch.js",
 			"settings":
 			{
-				"buffer_size": 360,
+				"buffer_size": 2095,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "student-work/sage/planets.js",
+			"file": "11-serial/writeExample.js",
 			"settings":
 			{
-				"buffer_size": 1135,
+				"buffer_size": 1858,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "11-serial/bleExample.js",
+			"settings":
+			{
+				"buffer_size": 1689,
 				"encoding": "UTF-8",
 				"line_ending": "Windows",
-				"name": "let planets = [];"
-			}
-		},
-		{
-			"file": "student-work/christian/bubbles.js",
-			"settings":
-			{
-				"buffer_size": 1087,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "let bubbles = [];"
-			}
-		},
-		{
-			"file": "student-work/christian/Midterm_Landscape-main/index.html",
-			"settings":
-			{
-				"buffer_size": 412,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "student-work/sage/midtermObjects.js",
-			"settings":
-			{
-				"buffer_size": 1620,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "class newHill {"
-			}
-		},
-		{
-			"file": "student-work/sage/midtermProject.js",
-			"settings":
-			{
-				"buffer_size": 3742,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "let horizon = 300;"
-			}
-		},
-		{
-			"file": "student-work/christian/Midterm_Landscape-main/landscape5.js",
-			"settings":
-			{
-				"buffer_size": 5422,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "08-review/06deepShallowCopy.js",
-			"settings":
-			{
-				"buffer_size": 1279,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "let shapes = [];\nlet amtShape = 7;\n\nfunction setup(){\n\tcreateCanvas(windowWidth,700);\n\t\n\t//create the shapes\n\tfor (let h = 0; h < amtShape; h++){\n\t\tshapes[h] = new SomeShapes(int(random(2)));\n\t}\n\n}\n\nfunction draw(){\n\tbackground(240);\n\n\t//move it\n\tfor(let s = 0; s < shapes.length;s++){\n\t\tshapes[s].moveIt();\n\t}\n\n\tshapes[1].mouseIt();\n\n\t//check for collisions\n\tfor(let sB = 0; sB < shapes.length;sB++){\n\t\tfor(let sA = sB+1; sA < shapes.length;sA++){\n\t\t\t//if they collided, update the 2nd shape\n\t\t\tif(shapes[sB].detectCollision(shapes[sA])){\n\t\t\t\tshapes[sA].collision = true;\n\t\t\t}\n\t\t}\n\t}\n\n\t//display it\n\tfor(let s = 0; s < shapes.length;s++){\n\t\tshapes[s].display();\n\t}\n\t\n}\n\nclass SomeShapes{\n\tconstructor(tempShape){\n\t\tthis.shape = tempShape;//0 = ellipse, 1 = rectangle\n\t\tthis.x = width/2;//location\n\t\tthis.y = height/2;//location\n\t\tthis.dimX = int(random(50,150));//shape dimension\n\t\tthis.dimY = int(random(50,150));//shape dimension\n\t\tthis.noiseOffX = int(random(100));// noise offset\n\t\tthis.noiseOffY = int(random(100));//noise offset\n\t\tthis.color = color(20,20,20,0);//border color\n\t\tthis.hitColor = color(int(random(255)),int(random(255)),int(random(255)),150);//interior color\n\t\tthis.collision = false;\n\t\tthis.collisionVisual = true;\n\t\tthis.inc = map(random(10),0.0,9.0,0.001,0.003);\n\t\tthis.noise = 0;\n\t}\n\n\tmoveIt(){\n\t\tthis.noise += this.inc;\n\t\tthis.x = width * noise(this.noise + this.noiseOffX);\n\t\tthis.y = height * noise(this.noise + this.noiseOffY);\n\t}\n\n\tmouseIt(){\n\t\tthis.x = mouseX;\n\t\tthis.y = mouseY;\n\t}\n\n\tdetectCollision(arg){\n\t\tlet result = false;\n\t\t//circle to circle\n\t\tif(this.shape == 0 && arg.shape ==0){\n\t\t\t//check if the distance between centers is less\n\t\t\t//than the radii combined\n\t\t\tif(dist(this.x,this.y,arg.x,arg.y) < (this.dimX/2)+(arg.dimX/2)){\n\t\t\t\tthis.collision = true;\n\t\t\t\tresult = true;\n\t\t\t}\n\t\t} else if (this.shape == 1 && arg.shape ==1){ //rect to rect\n\t\t\tlet minDistX = (this.dimX/2) + (arg.dimX/2);\n\t\t\tlet minDistY = (this.dimY/2) + (arg.dimY/2);\n\n\t\t\tif(abs(this.x-arg.x) < minDistX && abs(this.y-arg.y) < minDistY){\n\t\t\t\tthis.collision = true;\n\t\t\t\tresult = true;\n\t\t\t}\n\t\t} else if (this.shape != arg.shape){//circle to rect\n\n\t\t\tlet circX,circY,circDia, rectX, rectY,rectDimX,rectDimY;\n\t\t\t//if this is a circle & arg is a rect\n\t\t\tif (this.shape == 0){\n\t\t\t\tcircX = this.x;\n\t\t\t\tcircY = this.y;\n\t\t\t\tcircDia = this.dimX;\n\t\t\t\trectX = arg.x;\n\t\t\t\trectY = arg.y;\n\t\t\t\trectDimX = arg.dimX;\n\t\t\t\trectDimY= arg.dimY;\n\n\t\t\t//if this is a rectangle and arg is a circle\n\t\t\t} else{\n\t\t\t\tcircX = arg.x;\n\t\t\t\tcircY = arg.y;\n\t\t\t\tcircDia = arg.dimX;\n\t\t\t\trectX = this.x;\n\t\t\t\trectY = this.y;\n\t\t\t\trectDimX = this.dimX;\n\t\t\t\trectDimY= this.dimY;\n\t\t\t}\n\t\t\t/*1) check if the circle is inside the outer radius of the rectangle\n\t\t\t2) check if the circle is inside the inner radius of the circle\n\t\t\t3) check the points*/\n\t\t\t\n\t\t\t\n\t\t\t//outer radius of rect\n\t\t\tlet outerRect;\n\t\t\t//inner radius of rect\n\t\t\tlet innerRect;\n\t\t\t\n\t\t\touterRect = dist(rectX,rectY, rectX-(rectDimX),rectY-(rectDimY));\n\n\t\t\tif(rectDimX > rectDimY){\n\t\t\t\tinnerRect = rectDimY;\n\t\t\t} else{\n\t\t\t\tinnerRect = rectDimX;\n\t\t\t}\n\n\t\t\t//part 1check if its within the outer radius\n\t\t\t//if it is outside this circle, we can rule out any collision\n\t\t\tif(dist(circX,circY,rectX,rectY) < (circDia/2)+(outerRect/2)){\n\t\t\t\tif(this.collisionVisual){\n\t\t\t\t\tnoFill();\n\t\t\t\t\tstroke(255,0,0);\n\t\t\t\t\tellipse(rectX,rectY,outerRect,outerRect);\n\t\t\t\t}\n\t\t\t\t//part 2 check if its within the inner radius (this step is sort of optional)\n\t\t\t\t//if it is inside this circle, we can quickly confirm a collision\n\t\t\t\tif(dist(circX,circY,rectX,rectY) < (circDia/2)+(innerRect/2)){\n\t\t\t\t\t//display inner radius\n\t\t\t\t\tif(this.collisionVisual){\n\t\t\t\t\t\tellipse(rectX,rectY,innerRect,innerRect);\n\t\t\t\t\t}\n\t\t\t\t\tthis.collision = true;\n\t\t\t\t\tresult = true;\n\t\t\t\t//part 3\n\t\t\t\t} else {//if it is inside the outer circle but outside of the inner circle, it still may or may not have actually collided\n\n\t\t\t\t\t//check where the shapes are in relation to one another\n\t\t\t\t\t//if the bottom of the circle is below the top of the rectangle\n\t\t\t\t\t//and if the top of the circle is above the bottom of the rectangle\n\t\t\t\t\t//then check the sides\n\t\t\t\t\tif(circY + (circDia/2) > rectY - (rectDimY/2) && circY - (circDia/2) < rectY + (rectDimY/2)){\n\t\t\t\t\t\tif(circX < rectX){//if the center of circle is to the left of the center of rect\n\t\t\t\t\t\t\tif(dist(circX,circY,rectX-(rectDimX/2),circY) < circDia/2){\n\t\t\t\t\t\t\t\tthis.collision = true;\n\t\t\t\t\t\t\t\tresult = true;\n\t\t\t\t\t\t\t}\t\t\t\n\t\t\t\t\t\t} else {//if the center of circle is to the right of the center of rect\n\t\t\t\t\t\t\tif(dist(circX,circY,rectX+(rectDimX/2),circY) < circDia/2){\n\t\t\t\t\t\t\t\tthis.collision = true;\n\t\t\t\t\t\t\t\tresult = true;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t} else {\n\t\t\t\t\t\tif(circY < rectY){//if the center of circle is above the center of the rect\n\t\t\t\t\t\t\tif(dist(circX,circY,circX,rectY-(rectDimY/2)) < circDia/2){//check if the side of the circle is within the boundary of the rect\n\t\t\t\t\t\t\t\tthis.collision = true;\n\t\t\t\t\t\t\t\tresult = true;\n\t\t\t\t\t\t\t}\t\t\t\n\t\t\t\t\t\t} else {//if the center of circle is below the center of the rect\n\t\t\t\t\t\t\tif(dist(circX,circY,circX,rectY+(rectDimY/2))< circDia/2){//check if the side of the circle is within the boundary of the rect\n\t\t\t\t\t\t\t\tthis.collision = true;\n\t\t\t\t\t\t\t\tresult = true;\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t} else {\n\t\t\tthis.collision = false;\n\t\t\tresult = false;\n\t\t}\n\n\t\treturn result;\n\t}\n\n\tdisplay(){\n\t\t//the mode is important for the collision detection to work\n\t\trectMode(CENTER);\n\t\tellipseMode(CENTER);\n\n\t\tif(this.collision == true){\n\t\t\tfill(this.hitColor);\n\t\t} else if (this.collision == false) {\n\t\t\tfill(this.color);\n\t\t}\n\n\t\tif(this.shape == 0){\n\t\t\tellipse(this.x,this.y,this.dimX,this.dimX);\n\t\t} else if (this.shape ==1){\n\t\t\trect(this.x,this.y,this.dimX,this.dimY);\n\t\t}\n\n\t\tthis.collision = false;\n\t}\n}",
-			"file": "08-collisionDetection/02collisionDetection.js",
-			"file_size": 5976,
-			"file_write_time": 132484058382968564,
-			"settings":
-			{
-				"buffer_size": 5764,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "08-collisionDetection/collisionGame.js",
-			"settings":
-			{
-				"buffer_size": 1415,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/websites/coursesWebsite/board/index.html",
-			"settings":
-			{
-				"buffer_size": 364,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "07-media/01image.js",
-			"settings":
-			{
-				"buffer_size": 720,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "07-media/02multipleImages.js",
-			"settings":
-			{
-				"buffer_size": 660,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"name": "// The serviceUuid must match the serviceUuid of t"
 			}
 		}
 	],
@@ -785,20 +690,33 @@
 	"expanded_folders":
 	[
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/11-serial",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/empty-example"
 	],
 	"file_history":
 	[
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/07-media/02multipleImages.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/07-media/01image.js",
+		"/D/websites/coursesWebsite/board/index.html",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/08-collisionDetection/collisionGame.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/08-collisionDetection/02collisionDetection.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/08-review/06deepShallowCopy.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/student-work/christian/Midterm_Landscape-main/landscape5.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/student-work/sage/midtermProject.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/student-work/sage/midtermObjects.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/student-work/christian/Midterm_Landscape-main/index.html",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/student-work/christian/bubbles.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/student-work/sage/planets.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/student-work/dylan/Dylans_Classwork-main/index.html",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/student-work/mengmeng/crab-trip-main/Crab trip.js",
+		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/11-serial/01-basicExample-fromInterface.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/10-serial/01-basicExample.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/.gitignore",
 		"/D/websites/coursesWebsite/board/whiteboard.js",
-		"/D/websites/coursesWebsite/board/index.html",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/07-media/02multipleImages.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/05-data/08api.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/06-noise/multidimensionalNoise.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/06-noise/noise-vs-randomArray.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/07-media/videoAnalysis.js",
-		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/07-media/01image.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/06-noise/noise-vs-random.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/06-noise/randomness.js",
 		"/D/DM-GY-6063-CreativeCoding-C-Fall-2020-Nathanson/index.html",
@@ -904,19 +822,7 @@
 		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/graficaDemo.js",
 		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/lib/grafica.js",
 		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/02arrayMethods.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/01parseStrings.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/15videoAsSensor.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 8/index.html",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/18motionDetection.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/index.html",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/14drawingVideo.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/12videoPixels.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/wk9notes",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/17backgroundRemoval.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/13liveCamera.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/10videoFileBasics.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/11videoFunctionality.js",
-		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 9/16motionDetection.js"
+		"/C/Users/Alex/Documents/IDM_UY_CC_F19/week 10/01parseStrings.js"
 	],
 	"find":
 	{
@@ -963,7 +869,7 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 12,
 			"sheets":
 			[
 				{
@@ -992,7 +898,7 @@
 						"translation.y": 1050.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -1021,7 +927,7 @@
 						"translation.y": 375.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -1050,7 +956,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1080,7 +986,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -1109,7 +1015,7 @@
 						"translation.y": 450.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1139,7 +1045,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1167,7 +1073,7 @@
 						"translation.y": 75.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1196,7 +1102,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1226,7 +1132,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1256,7 +1162,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1265,75 +1171,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 582,
+						"buffer_size": 576,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								468,
-								468
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "student-work/mengmeng/crab-trip-main/Crab trip.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 18044,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1093,
-								1093
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 871.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "student-work/dylan/Dylans_Classwork-main/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 360,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								252,
-								252
+								524,
+								524
 							]
 						],
 						"settings":
@@ -1350,359 +1196,120 @@
 					"type": "text"
 				},
 				{
+					"buffer": 11,
+					"file": "11-serial/01-basicExample.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1051,
+								1051
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 975.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "11-serial/etchASketch.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2077,
+								2077
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2025.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
 					"buffer": 13,
-					"file": "student-work/sage/planets.js",
+					"file": "11-serial/writeExample.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1135,
+						"buffer_size": 1858,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1135,
-								1135
+								2,
+								2
 							]
 						],
 						"settings":
 						{
-							"auto_name": "let planets = [];",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "student-work/christian/bubbles.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1087,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								660,
-								660
-							]
-						],
-						"settings":
-						{
-							"auto_name": "let bubbles = [];",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "student-work/christian/Midterm_Landscape-main/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 412,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								297,
-								297
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "student-work/sage/midtermObjects.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1620,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1620,
-								1620
-							]
-						],
-						"settings":
-						{
-							"auto_name": "class newHill {",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1626.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "student-work/sage/midtermProject.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3742,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3742,
-								3742
-							]
-						],
-						"settings":
-						{
-							"auto_name": "let horizon = 300;",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2550.0,
+						"translation.y": 1050.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
-					"file": "student-work/christian/Midterm_Landscape-main/landscape5.js",
+					"buffer": 14,
+					"file": "11-serial/bleExample.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5422,
+						"buffer_size": 1689,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								431,
-								431
+								144,
+								144
 							]
 						],
 						"settings":
 						{
+							"auto_name": "// The serviceUuid must match the serviceUuid of t",
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 375.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "08-review/06deepShallowCopy.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1279,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								131,
-								131
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "08-collisionDetection/02collisionDetection.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5764,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4671,
-								4671
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3491.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "08-collisionDetection/collisionGame.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1415,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								486,
-								486
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "/D/websites/coursesWebsite/board/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 364,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								256,
-								256
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "07-media/01image.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 720,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								536,
-								536
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 150.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"file": "07-media/02multipleImages.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 660,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								212,
-								212
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
 					"type": "text"
 				}
 			]

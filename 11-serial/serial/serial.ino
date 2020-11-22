@@ -1,7 +1,7 @@
 //based on Serial Call and Response by Tom Igoe and Scott Fitzgerald
 
 const int pot1 = A0;
-const int LED = 12;
+const int LED = 13;
 
 int inByte = 0;// incoming serial byte
 int potVal1; //potentiameter 1

@@ -1,4 +1,9 @@
+#include <Arduino_LSM9DS1.h>
+//IMU code based on example: simpleAccelerometer
+
 //based on Serial Call and Response by Tom Igoe and Scott Fitzgerald
+
+
 
 const int pot1 = A0;
 const int pot2 = A1;
@@ -20,6 +25,13 @@ int av[2];
 void setup() {
 
   Serial.begin(9600);
+
+
+  
+  if (!IMU.begin()) {
+    Serial.println("Failed to initialize IMU!");
+    while (1);
+  }
   
   //wait for serial port to connect before proceeding
   while (!Serial) {
@@ -33,6 +45,8 @@ void setup() {
     smooth2[s]=0;
   }
 
+  
+
 }
 
 void loop() {
@@ -40,6 +54,11 @@ void loop() {
 potVal1 = analogRead(pot1);
 potVal2 = analogRead(pot2);
 
+float x, y, z;
+
+  if (IMU.accelerationAvailable()) {
+    IMU.readAcceleration(x, y, z);
+  }
 
  //shift data
     for(int s =1;s<(smoothAmt);s++){
@@ -63,8 +82,18 @@ potVal2 = analogRead(pot2);
 
 Serial.print(av[0]);
 Serial.print(",");
-Serial.println(av[1]);
+Serial.print(av[1]);
+Serial.print(",");
+Serial.print(x);
+Serial.print(",");
+Serial.print(y);
+Serial.print(",");
+Serial.println(z);
 
+  /*Serial.print(potVal1);
+  Serial.print(",");
+  Serial.println(potVal2);
+*/
   //check if there is an data available in the buffer
   if (Serial.available() > 0) {
     inByte = Serial.read();

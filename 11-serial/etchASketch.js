@@ -10,6 +10,10 @@ let prevYCoord;
 
 let portName = 'COM3';//update this with the port you are using
 
+let oldAcc;
+
+let acc = [];
+
 function setup() {
  createCanvas(windowWidth, windowHeight);
 	background(255,255,255)
@@ -19,7 +23,7 @@ function setup() {
 
  serial = new p5.SerialPort();
 
- serial.list();
+ //serial.list();
  serial.open(portName);
 
  serial.on('connected', serverConnected);
@@ -66,11 +70,16 @@ function gotData() {
  if (!currentString) return;
  //console.log(currentString);
  latestData = currentString.split(',');
- //console.log(latestData);
+ console.log(latestData);
+
+ acc[0]= map(latestData[2],-2,2,0,100);
+  acc[1]= map(latestData[3],-2,2,0,100);
+ acc[2]= map(latestData[4],-2,2,0,100);
+
 }
 
 function draw() {
-
+//background(255);
  prevXCoord = xCoord;
 xCoord = constrain(map(latestData[0],0,1023,0,width),0,width);
 
@@ -81,6 +90,18 @@ yCoord = constrain(map(latestData[1],0,1023,0,height),0,height);
  stroke(0);
  strokeWeight(5);
  line(prevXCoord, prevYCoord,xCoord,yCoord);
+/*
+ noStroke();
+ fill(255,0,0);
+ rect(0,0,20,acc[0])
+ fill(0,255,0);
+  rect(20,0,20,acc[1])
+
+ fill(0,0,255);
+  rect(40,0,20,acc[2])*/
+
+  eraseIt();
+
 }
 
 
@@ -92,4 +113,14 @@ function keyPressed(){
 
 function writeSerial(writeOut){
 	serial.write(writeOut);
+}
+
+function eraseIt(){
+
+	if(acc[1]-oldAcc > 100){
+		background(255);
+		oldAcc = acc[1];
+	}
+
+	oldAcc = acc[1];
 }
