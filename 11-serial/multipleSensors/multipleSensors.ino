@@ -26,7 +26,7 @@ void setup() {
 
   Serial.begin(9600);
 
-
+  delay(1000);
   
   if (!IMU.begin()) {
     Serial.println("Failed to initialize IMU!");
