@@ -27,24 +27,28 @@ function draw(){
 	//text(thresh,20,20);
 	//console.log(thresh);
 
-	x++;
-	if(x>width){
-		x = 0;
-	}
+	
 	//the AudioIn class contains its own instance of the amplitude class
 	//returns value between 0.0 and 1.0
 	inputLevel = mic.getLevel();
 
+	//slide
 	push();
 	stroke(0);
 	strokeWeight(4);
 	line(0,mouseY,20,mouseY);
 	pop();
 
-
+	//ellipse
 	fill(0,5);
 	ellipse(width/3,windowHeight/2,map(inputLevel,0.0,1.0,0,1200));
 	stroke(0);
+
+	//time series
+	x++;
+	if(x>width){
+		x = 0;
+	}
 	line(x,map(inputLevel,0.0,1.0,height,0),x,height);
 
 	if(inputLevel > thresh){
@@ -54,6 +58,7 @@ function draw(){
 	}
 
 
+	//circular time series thing
 	push();
 	translate(width*.66,height/2);
 	rotate((frameCount*.1)%TWO_PI);

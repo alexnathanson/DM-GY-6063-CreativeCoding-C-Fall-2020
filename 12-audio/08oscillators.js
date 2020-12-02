@@ -21,11 +21,12 @@ function setup(){
 	saw.amp(0);
 
 	//this is another way to make a sine wave oscillator
-	osc = new p5.Oscillator();
+	//Options: 'sine' (default), 'triangle', 'sawtooth', 'square'
+/*	osc = new p5.Oscillator();
 	osc.amp(0);
 	osc.freq(60);
-	osc.setType('saw');
-	osc.start();
+	osc.setType('sine');
+	osc.start();*/
 
 
   //use an fft to visualize the sound
@@ -36,7 +37,7 @@ function setup(){
 function draw(){
 	createCanvas(windowWidth,600);
 
-	text("a-s-d-f-g = sine-square-triangle-saw-osc",20,20);
+	text("a-s-d-f= sine-square-triangle-saw",20,20);
 
 	  let waveform = fft.waveform();
 	  noFill();
@@ -57,7 +58,7 @@ function keyReleased(){
 		triangle.amp(0,.5);
 		saw.amp(0,.5);
 /*		sine.amp(0,.5);
-*/		osc.amp(0,.5);
+*/		//osc.amp(0,.5);
 
 		sine.amp(1,1);
 		console.log('sine');
@@ -67,7 +68,7 @@ function keyReleased(){
 */		triangle.amp(0,.5);
 		saw.amp(0,.5);
 		sine.amp(0,.5);
-		osc.amp(0,.5);
+	//	osc.amp(0,.5);
 
 		square.amp(1,1);
 		console.log('square');
@@ -77,7 +78,7 @@ function keyReleased(){
 /*		triangle.amp(0,.5);
 */		saw.amp(0,.5);
 		sine.amp(0,.5);
-		osc.amp(0,.5);
+	//	osc.amp(0,.5);
 
 		triangle.amp(1,1);
 		console.log('triangle');
@@ -87,22 +88,21 @@ function keyReleased(){
 		triangle.amp(0,.5);
 /*		saw.amp(0,.5);
 */		sine.amp(0,.5);
-		osc.amp(0,.5);
+	//	osc.amp(0,.5);
 
 		saw.amp(1,1);
 		console.log('saw');
-	} else if (key =='g'){
+	} /*else if (key =='g'){
 		square.amp(0,.5);
 		triangle.amp(0,.5);
 		saw.amp(0,.5);
 		sine.amp(0,.5);
-/*		osc.amp(0,.5);
-*/
+
 		osc.amp(1,1);
 		console.log('osc');
-	}
+	}*/
 }
 
 function mouseDragged(){
-	osc.freq(map(mouseX,0,width,20,5000));
+//	osc.freq(map(mouseX,0,width,20,5000));
 }

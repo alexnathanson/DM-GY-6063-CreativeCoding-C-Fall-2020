@@ -6,14 +6,16 @@ let triggerC;
 let triggerB = false;
 let thresh,nrg,nX,nY;
 let fr = 2000;
+let bins = 16;//must be a power of 2
+
 function preload(){
-  sound = loadSound('assets/TomWaitsEmotionalWeatherReport.mp3');
+  sound = loadSound('12-audio/assets/TomWaitsEmotionalWeatherReport.mp3');
 }
 
 function setup(){
   createCanvas(windowWidth,600);
   //default smooth = 0.8, default bins = 1024 (can be changed to any power of 2 between 2-1024)
-  fft = new p5.FFT(0.8,16);
+  fft = new p5.FFT(0.8,bins);
   //console.log(fft);
   //sound.amp(0.2);
 
@@ -40,7 +42,11 @@ function draw(){
 
   //analyze outputs an array (length = num of bins) with the amplitudes at each frequency
   let spectrum = fft.analyze();
-  //console.log(spectrum);
+
+  if(frameCount%60==0){
+    console.log(spectrum);
+  }
+
   noStroke();
   fill(0,255,0); // spectrum is green
   for (var i = 0; i< spectrum.length; i++){

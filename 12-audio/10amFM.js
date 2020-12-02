@@ -15,34 +15,37 @@ let fft; // we'll visualize the waveform
 let displayText, displayType;
 let oscType;
 
+// min/max ranges for modulator
+let modMaxFreq = 112;
+let modMinFreq = 0;
+let modMaxDepth = 150;
+let modMinDepth = -150;
+
+let amB = true;
+
 function setup() {
   createCanvas(windowWidth,600);
   noFill();
 
   carrier = new p5.Oscillator('sine');
-  carrier.amp(1); // set amplitude
+  carrier.amp(0); // set amplitude
   carrier.freq(220); // set frequency
   carrier.start(); // start oscillating
 
-  modulatorFM = new p5.Oscillator('sawtooth');
-  modulatorFM.disconnect();
-  modulatorFM.amp(1); // will map to mouseX
-  modulatorFM.mult(300).add(100)
-  modulatorFM.freq(4); // will map to mouseY
-  modulatorFM.start();
+  modulator = new p5.Oscillator('square');
+  modulator.disconnect();
+  //modulator.amp(1)
+  //modulator.mult(300).add(100)
+  //modulator.freq(4); // will map to mouseY
+  modulator.start();
 
-  modulatorAM = new p5.Oscillator('sawtooth');
-  modulatorAM.disconnect();
-  modulatorAM.amp(1); // will map to mouseX
-  modulatorAM.freq(4); // will map to mouseY
-  modulatorAM.start();
-
+  carrier.freq(modulator);
+  
   // create an fft to analyze the audio
   fft = new p5.FFT();
+  fft.setInput(carrier);
 
-  oscType='sawtooth';
-  displayType='sawtooth';
-  am();
+  fm();
 }
 
 function draw() {
@@ -56,28 +59,26 @@ function draw() {
 	text(displayType,20,130);
 	pop();
 
+
+ let modDepth = map(mouseX, 0, width, modMinDepth, modMaxDepth);
+  modulator.amp(modDepth);
+
   // map mouseY to moodulator freq between 0 and 20hz
-  let modFreq = map(mouseY, 0, height, 20, 0);
-  modulatorAM.freq(modFreq);
-  modulatorFM.freq(modFreq);
-
-  // change the original amplitude of the sawOsc, before it's scaled.
-  // negative amp reverses the waveform, and sounds percussive
-  let modAmp = map(mouseX, 0, width, -1, 1);
-  modulatorAM.amp(modAmp);
-  modulatorFM.amp(modAmp);
-
+  let modFreq = map(mouseY, 0, height, 0, 20);
+  modulator.freq(modFreq);
 
   // analyze the waveform
   waveform = fft.waveform();
+ // waveformMod = fftM.waveform();
 
   // draw the shape of the waveform
   stroke(255);
   strokeWeight(10);
+  
   beginShape();
   for (var i = 0; i<waveform.length; i++){
     var x = map(i, 0, waveform.length, 0, width);
-    var y = map(waveform[i], -1, 1, -height/2, height/2);
+    var y = map(waveform[i], -1, 1, 0, height);
     vertex(x, y + height/2);
   }
   endShape();
@@ -104,21 +105,27 @@ function keyPressed(){
 			case '4':
 				oscType='triangle';
 		}
-		modulatorAM.setType(oscType);
-		modulatorFM.setType(oscType);
+	//	modulatorAM.setType(oscType);
+		modulator.setType(oscType);
 		displayType=oscType;
 	}
 }
 
 function fm(){
+  amB = false;
+
 	displayText='FM';
-	carrier.amp(1);
-	// multiply amplitude range by 200, then add 100
-	carrier.freq(modulatorFM);
+
+  //carrier.amp(1);
+    // multiply amplitude range by 200, then add 100
+  carrier.freq(modulator);
+
 }
 
 function am(){
+    carrier.amp(modulator);
+    carrier.freq(420);
+  amB = true;
 	displayText='AM';
-	carrier.amp(modulatorAM);
-	carrier.freq(220);
+
 }

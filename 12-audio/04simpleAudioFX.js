@@ -53,9 +53,10 @@ function setup(){
 
 	// source, delayTime, feedback, filter frequency
 	delay.process(gain, .12, 0.7, 440);
-	/*delay.delayTime(.12);
+/*	delay.process(gain);
+	delay.delayTime(.12);
 	delay.feedback(0.7);
-	delay.filter(2300);*/
+	delay.filter(440);*/
 	delay.disconnect();
 
 	compressor.process(gain);
